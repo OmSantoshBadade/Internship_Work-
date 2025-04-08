@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Employee Dashboard - Campus Placement System{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mb-4">Employee Dashboard</h2>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Profile Information</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Name:</strong> {{ employee.name }}</p>
+                    <p><strong>Company:</strong> {{ employee.company_name }}</p>
+                    <p><strong>Designation:</strong> {{ employee.designation }}</p>
+                    <p><strong>Contact:</strong> {{ employee.contact_number }}</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Post New Job</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="position" class="form-label">Position</label>
+                            <input type="text" class="form-control" id="position" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="requirements" class="form-label">Requirements</label>
+                            <textarea class="form-control" id="requirements" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Job Description</label>
+                            <textarea class="form-control" id="description" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Post Job</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Posted Jobs</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Requirements</th>
+                                    <th>Applications</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Posted jobs will be populated here -->
+                                <tr>
+                                    <td colspan="5" class="text-center">No jobs posted yet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Job Applications</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>Position</th>
+                                    <th>Department</th>
+                                    <th>CGPA</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Job applications will be populated here -->
+                                <tr>
+                                    <td colspan="6" class="text-center">No applications received yet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

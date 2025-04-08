@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}TPO Dashboard - Campus Placement System{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mb-4">TPO Dashboard</h2>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Profile Information</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Name:</strong> {{ tpo.name }}</p>
+                    <p><strong>Department:</strong> {{ tpo.department }}</p>
+                    <p><strong>Contact:</strong> {{ tpo.contact_number }}</p>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Statistics</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-6 mb-3">
+                            <h3>0</h3>
+                            <p class="text-muted">Total Students</p>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <h3>0</h3>
+                            <p class="text-muted">Total Companies</p>
+                        </div>
+                        <div class="col-6">
+                            <h3>0</h3>
+                            <p class="text-muted">Active Jobs</p>
+                        </div>
+                        <div class="col-6">
+                            <h3>0</h3>
+                            <p class="text-muted">Placements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Recent Job Postings</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Position</th>
+                                    <th>Posted On</th>
+                                    <th>Applications</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Job postings will be populated here -->
+                                <tr>
+                                    <td colspan="5" class="text-center">No job postings yet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Recent Applications</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Company</th>
+                                    <th>Position</th>
+                                    <th>Applied On</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Applications will be populated here -->
+                                <tr>
+                                    <td colspan="5" class="text-center">No applications yet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

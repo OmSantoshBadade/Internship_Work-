@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Student Dashboard - Campus Placement System{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mb-4">Student Dashboard</h2>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Profile Information</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Name:</strong> {{ student.name }}</p>
+                    <p><strong>Roll Number:</strong> {{ student.roll_number }}</p>
+                    <p><strong>Department:</strong> {{ student.department }}</p>
+                    <p><strong>Year:</strong> {{ student.year }}</p>
+                    <p><strong>CGPA:</strong> {{ student.cgpa }}</p>
+                    <p><strong>Skills:</strong> {{ student.skills }}</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Available Jobs</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Position</th>
+                                    <th>Requirements</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Job listings will be populated here -->
+                                <tr>
+                                    <td colspan="4" class="text-center">No jobs available at the moment</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Applied Jobs</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Position</th>
+                                    <th>Status</th>
+                                    <th>Date Applied</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Applied jobs will be populated here -->
+                                <tr>
+                                    <td colspan="4" class="text-center">No applications yet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

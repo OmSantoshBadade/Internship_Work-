@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>Welcome, {{ current_user.username }}!</h3>
+    </div>
+    <div class="card-body">
+        {% if current_user.user_type == 'student' %}
+            <h4>Student Dashboard</h4>
+            <p>This is your student dashboard. Here you can:</p>
+            <ul>
+                <li>View available job postings</li>
+                <li>Apply for jobs</li>
+                <li>Track your applications</li>
+                <li>Update your profile</li>
+            </ul>
+        {% elif current_user.user_type == 'employer' %}
+            <h4>Employer Dashboard</h4>
+            <p>This is your employer dashboard. Here you can:</p>
+            <ul>
+                <li>Post new job openings</li>
+                <li>View student applications</li>
+                <li>Schedule interviews</li>
+                <li>Manage your company profile</li>
+            </ul>
+        {% else %}
+            <h4>TPO Dashboard</h4>
+            <p>This is your TPO dashboard. Here you can:</p>
+            <ul>
+                <li>Manage student profiles</li>
+                <li>Manage employer profiles</li>
+                <li>View placement statistics</li>
+                <li>Schedule placement events</li>
+            </ul>
+        {% endif %}
+    </div>
+    <div class="card-footer">
+        <p class="mb-0">You are logged in as a {{ current_user.user_type }}.</p>
+    </div>
+</div>
+{% endblock %} 
