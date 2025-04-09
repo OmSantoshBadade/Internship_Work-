@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
+{% block title %}Create TPO Account - Campus Placement System{% endblock %}
+
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h3 class="text-center">Register</h3>
+                <h3 class="text-center">Create TPO Account</h3>
             </div>
             <div class="card-body">
                 <form method="POST">
@@ -17,21 +19,13 @@
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="user_type" class="form-label">User Type</label>
-                        <select class="form-select" id="user_type" name="user_type" required>
-                            <option value="">Select User Type</option>
-                            <option value="student">Student</option>
-                            <option value="employer">Employer</option>
-                        </select>
-                    </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Register</button>
+                        <button type="submit" class="btn btn-primary">Create TPO Account</button>
                     </div>
                 </form>
             </div>
             <div class="card-footer text-center">
-                <p class="mb-0">Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+                <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Back to Dashboard</a>
             </div>
         </div>
     </div>
